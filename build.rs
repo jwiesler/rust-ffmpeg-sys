@@ -1137,7 +1137,7 @@ fn main() {
     headers.push(search_include(&include_paths, "libavutil/twofish.h"));
     headers.push(search_include(&include_paths, "libavutil/avutil.h"));
     headers.push(search_include(&include_paths, "libavutil/xtea.h"));
-        .header(search_include(&include_paths, "libavutil/hwcontext.h"));
+    headers.push(search_include(&include_paths, "libavutil/hwcontext.h"));
 
     if env::var("CARGO_FEATURE_POSTPROC").is_ok() {
         headers.push(search_include(&include_paths, "libpostproc/postprocess.h"));
